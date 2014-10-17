@@ -31,4 +31,4 @@ ADD ./pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
 ADD ./boot /bin/boot
 
 EXPOSE 5432
-CMD ['/bin/boot']
+CMD ["/bin/boot"]
