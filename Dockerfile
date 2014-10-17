@@ -28,8 +28,4 @@ RUN curl -sSL https://raw.githubusercontent.com/pypa/pip/1.5.6/contrib/get-pip.p
 
 ADD postgresql.conf /etc/postgresql/9.3/main/postgresql.conf
 ADD pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
-
-RUN mkdir -p /opt/bin
-ADD boot /opt/bin/boot
-
-CMD ["/opt/bin/boot"]
+ADD boot /bin/boot
