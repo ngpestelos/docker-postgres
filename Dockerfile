@@ -26,6 +26,9 @@ RUN /etc/init.d/postgresql stop
 # install pip
 RUN curl -sSL https://raw.githubusercontent.com/pypa/pip/1.5.6/contrib/get-pip.py | python -
 
+# generate en_US.UTF-8 locale
+RUN locale-gen en_US.UTF-8
+
 ADD ./postgresql.conf /etc/postgresql/9.3/main/postgresql.conf
 ADD ./pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
 ADD ./boot /bin/boot
