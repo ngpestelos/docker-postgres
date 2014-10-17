@@ -29,6 +29,7 @@ RUN curl -sSL https://raw.githubusercontent.com/pypa/pip/1.5.6/contrib/get-pip.p
 ADD ./postgresql.conf /etc/postgresql/9.3/main/postgresql.conf
 ADD ./pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
 ADD ./boot /bin/boot
+ADD ./locale /etc/default/locale
 
 EXPOSE 5432
 CMD ["/bin/boot"]
